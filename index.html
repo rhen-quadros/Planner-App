@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+    </header>
+    <div class="container mt-4">
+      <!-- Timeblocks go here -->
+      <!-- - Present timeblocks for standard business hours when the user scrolls down. -->
+      <div class="row time-block">
+        <div id="9am" class="col-2 hour">9AM</div>
+        <textarea
+          id="9am-description"
+          class="col-8 description textarea"
+        ></textarea>
+        <button
+          id="9am-save"
+          class="col-2 saveBtn fas fa-lock justify-content-center"
+        ></button>
+      </div>
+      <div class="row time-block">
+        <div id="10am" class="col-2 hour">10AM</div>
+        <textarea
+          id="10am-description"
+          class="col-8 description textarea"
+        ></textarea>
+        <button
+          id="10am-save"
+          class="col-2 saveBtn fas fa-lock justify-content-center"
+        ></button>
+      </div>
+      <div class="row time-block">
+        <div id="11am" class="col-2 hour">11AM</div>
+        <textarea
+          id="11am-description"
+          class="col-8 description textarea"
+        ></textarea>
+        <button
+          id="11am-save"
+          class="col-2 saveBtn fas fa-lock justify-content-center"
+        ></button>
+      </div>
+      <div class="row time-block">
+        <div id="12pm" class="col-2 hour">12PM</div>
+        <textarea
+          id="12pm-description"
+          class="col-8 description textarea"
+        ></textarea>
+        <button
+          id="12pm-save"
+          class="col-2 saveBtn fas fa-lock justify-content-center"
+        ></button>
+      </div>
+      <div class="row time-block">
+        <div id="1pm" class="col-2 hour">1PM</div>
+        <textarea
+          id="1pm-description"
+          class="col-8 description textarea"
+        ></textarea>
+        <button
+          id="1pm-save"
+          class="col-2 saveBtn fas fa-lock justify-content-center"
+        ></button>
+      </div>
+      <div class="row time-block">
+        <div id="2pm" class="col-2 hour">2PM</div>
+        <textarea
+          id="2pm-description"
+          class="col-8 description textarea"
+        ></textarea>
+        <button
+          id="2pm-save"
+          class="col-2 saveBtn fas fa-lock justify-content-center"
+        ></button>
+      </div>
+      <div class="row time-block">
+        <div id="3pm" class="col-2 hour">3PM</div>
+        <textarea
+          id="3pm-description"
+          class="col-8 description textarea"
+        ></textarea>
+        <button
+          id="3pm-save"
+          class="col-2 saveBtn fas fa-lock justify-content-center"
+        ></button>
+      </div>
+      <div class="row time-block">
+        <div id="4pm" class="col-2 hour">4PM</div>
+        <textarea
+          id="4pm-description"
+          class="col-8 description textarea"
+        ></textarea>
+        <button
+          id="4pm-save"
+          class="col-2 saveBtn fas fa-lock justify-content-center"
+        ></button>
+      </div>
+      <div class="row time-block">
+        <div id="5pm" class="col-2 hour">5PM</div>
+        <textarea
+          id="5pm-description"
+          class="col-8 description textarea"
+        ></textarea>
+        <button
+          id="5pm-save"
+          class="col-2 saveBtn fas fa-lock justify-content-center"
+        ></button>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
