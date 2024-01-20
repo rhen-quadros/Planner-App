@@ -2,47 +2,47 @@ $(document).ready(function () {
   // save reference to important DOM elements
   var timeBlocks = [
     {
-      time: "9am",
+      time: "22",
       descriptionEl: $("#9am-description"),
       saveEl: $("#9am-save"),
     },
     {
-      time: "10am",
+      time: "23",
       descriptionEl: $("#10am-description"),
       saveEl: $("#10am-save"),
     },
     {
-      time: "11am",
+      time: "11",
       descriptionEl: $("#11am-description"),
       saveEl: $("#11am-save"),
     },
     {
-      time: "12pm",
+      time: "12",
       descriptionEl: $("#12pm-description"),
       saveEl: $("#12pm-save"),
     },
     {
-      time: "13pm",
+      time: "13",
       descriptionEl: $("#1pm-description"),
       saveEl: $("#1pm-save"),
     },
     {
-      time: "14pm",
+      time: "14",
       descriptionEl: $("#2pm-description"),
       saveEl: $("#2pm-save"),
     },
     {
-      time: "15pm",
+      time: "15",
       descriptionEl: $("#3pm-description"),
       saveEl: $("#3pm-save"),
     },
     {
-      time: "16pm",
+      time: "16",
       descriptionEl: $("#4pm-description"),
       saveEl: $("#4pm-save"),
     },
     {
-      time: "17pm",
+      time: "22",
       descriptionEl: $("#5pm-description"),
       saveEl: $("#5pm-save"),
     },
@@ -51,16 +51,14 @@ $(document).ready(function () {
   updateDateTime();
   colorCodeTimeBlocks();
 
-  // Display the current day at the top of the calender when a user opens the planner.
+  // Display the current day at the top of the calendar when a user opens the planner.
 
   function updateDateTime() {
     var currentDateTime = dayjs().format("dddd[,] MMMM D");
     $("#currentDay").text(currentDateTime);
   }
 
-  // - Color-code each timeblock based on past, present, and future when the timeblock is viewed.
-
-  //function if nineAmTimeEl is less than 9am time add class future, if it is in hour of 9am add class present, if after 9am add class past
+  // - Color-code each time block based on past, present, and future when the time block is viewed.
 
   function colorCodeTimeBlocks() {
     var currentHour = dayjs().hour();
@@ -78,4 +76,24 @@ $(document).ready(function () {
       }
     });
   }
+
+  // Add click event listener to the description element and save button
+  timeBlocks.forEach(function (block) {
+    block.descriptionEl.on("click", function () {
+      // Toggle the visibility of the textarea
+      block.descriptionEl.toggleClass("textarea");
+    });
+
+    // Retrieve saved events from local storage
+    var savedEvent = localStorage.getItem(block.time);
+    if (savedEvent) {
+      block.descriptionEl.text(savedEvent);
+    }
+
+    block.saveEl.on("click", function () {
+      // Save entered events to local storage when the user clicks the save button
+      var enteredEvent = block.descriptionEl.val().trim();
+      localStorage.setItem(block.time, enteredEvent);
+    });
+  });
 });
