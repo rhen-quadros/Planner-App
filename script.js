@@ -2,12 +2,12 @@ $(document).ready(function () {
   // save reference to important DOM elements
   var timeBlocks = [
     {
-      time: "22",
+      time: "9",
       descriptionEl: $("#9am-description"),
       saveEl: $("#9am-save"),
     },
     {
-      time: "23",
+      time: "10",
       descriptionEl: $("#10am-description"),
       saveEl: $("#10am-save"),
     },
@@ -42,7 +42,7 @@ $(document).ready(function () {
       saveEl: $("#4pm-save"),
     },
     {
-      time: "22",
+      time: "17",
       descriptionEl: $("#5pm-description"),
       saveEl: $("#5pm-save"),
     },
