@@ -1,5 +1,14 @@
 # Third-Party APIs: Work Day Scheduler
 
+## Deliverable
+
+![Deliverable](./Product-Demo.gif)
+
+## Deliverable
+
+Github - https://github.com/rhen-quadros/Planner-App
+Github Pages - https://rhen-quadros.github.io/Planner-App/
+
 ## Your Task
 
 Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
